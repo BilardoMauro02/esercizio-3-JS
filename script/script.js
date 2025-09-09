@@ -17,6 +17,7 @@ function stampa(){
     secondo.textContent = frutta[1]
     banana.appendChild(secondo);
 
+    // lista con la modifica kiwi
     frutta.splice(1,1, "kiwi");
     for(let oggetto of frutta){
         let terzo = document.createElement("li");
