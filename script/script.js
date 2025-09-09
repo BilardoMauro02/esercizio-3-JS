@@ -1,4 +1,5 @@
 let frutta = ["mela", "banana", "pera"];
+let animali = ["cane", "gatto"];
 
 function stampa(){
     let lista = document.getElementById("listaIniziale");
@@ -20,9 +21,35 @@ function stampa(){
     // lista con la modifica kiwi
     frutta.splice(1,1, "kiwi");
     for(let oggetto of frutta){
-        let terzo = document.createElement("li");
-        terzo.textContent = oggetto;
-        kiwi.appendChild(terzo);
+        let li = document.createElement("li");
+        li.textContent = oggetto;
+        kiwi.appendChild(li);
+    }
+
+    // lista animali
+    let listaAnimali = document.getElementById("listaAnimali");
+    for(let animale of animali){
+        let li = document.createElement("li");
+        li.textContent = animale;
+        listaAnimali.appendChild(li);
+    }
+
+    animali.unshift("pesce");
+    animali.push("criceto");
+    
+    let listaAnimali2 = document.getElementById("listaAnimali2");
+    for(let animale of animali){
+        let li = document.createElement("li");
+        li.textContent = animale;
+        listaAnimali2.appendChild(li);
+    }
+
+    animali.pop();
+    let listaAnimali3 = document.getElementById("listaAnimali3");
+    for(let animale of animali){
+        let li = document.createElement("li");
+        li.textContent = animale;
+        listaAnimali3.appendChild(li);
     }
 }
 
