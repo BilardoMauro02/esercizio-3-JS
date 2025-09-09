@@ -1,6 +1,11 @@
 let frutta = ["mela", "banana", "pera"];
 let animali = ["cane", "gatto"];
 
+//event listener che al caricamento della pagina permette una stampa completa di tutte le liste
+document.addEventListener("DOMContentLoaded", stampa());
+
+
+//funzione che permette tutte le stampe
 function stampa(){
     let lista = document.getElementById("listaIniziale");
     let banana = document.getElementById("banana"); 
@@ -34,6 +39,8 @@ function stampa(){
         listaAnimali.appendChild(li);
     }
 
+
+    //modifica aggiunta pesce e criceto
     animali.unshift("pesce");
     animali.push("criceto");
     
@@ -44,6 +51,7 @@ function stampa(){
         listaAnimali2.appendChild(li);
     }
 
+    // modifica rimozione criceto
     animali.pop();
     let listaAnimali3 = document.getElementById("listaAnimali3");
     for(let animale of animali){
@@ -51,6 +59,7 @@ function stampa(){
         li.textContent = animale;
         listaAnimali3.appendChild(li);
     }
+
+    
 }
 
-document.addEventListener("DOMContentLoaded", stampa());
